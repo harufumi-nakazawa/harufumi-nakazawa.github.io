@@ -57,5 +57,39 @@
             </div>
         </div>
     </div>
+
+    <style>
+        .photo-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .photo img {
+            width: 100%;
+            max-width: 900px;
+            display: block;
+            border-radius: 0; /* Removed rounded corners */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .caption {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: #555;
+            text-align: center;
+            margin-top: 8px;
+        }
+        /* Apply Cormorant Garamond font to all headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .nav .nav-link {
+            font-family: 'Lora', serif;
+        }
+    </style>
 </body>
 </html>
