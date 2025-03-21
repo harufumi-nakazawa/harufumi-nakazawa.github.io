@@ -7,8 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="bg-dark text-white py-4">
@@ -38,76 +40,60 @@
 
         <section class="mt-4">
             <h3>Working Papers</h3>
-            <div class="d-flex flex-wrap gap-3">
-                <div class="paper card p-3" style="width: 45%;">
-                    <strong>
-                        <a href="link-to-paper1.pdf" target="_blank">
-                            Migration Industries and the Making of an International Labor Market
-                        </a>
-                    </strong><br>
-                    <small>Please email me for a draft-in-progress.</small>
-                    <button class="toggle-abstract btn btn-link p-0">Show Abstract</button>
-                    <div class="abstract mt-2" style="display: none;">
-                        <strong>Abstract:</strong> As international labor migration increased in greater Asia from 1992 to 2009, 
-                        migrant supply chains characterized by smaller, more direct hiring were increasingly replaced by ones 
-                        that involve large employers and intermediaries. A simple model shows that such <i>industrialization</i> 
-                        of migration can increase both its scale and volatility. This is because intermediaries that match 
-                        origin-country workers to destination-country employers exploit economies of scale by aggregating demand 
-                        for marginal units with lower willingness to pay. Consistent with this model, I provide evidence for i) 
-                        large increases in both workers and employers from the first entry of intermediaries into the labor market 
-                        and ii) higher wage elasticities of demand for intermediaries and large firms compared to smaller employers 
-                        who hire directly. More opportunities abroad, therefore, came with increased uncertainty, which has policy 
-                        implications for migrant protection, brain gain, and risk-sharing.
+            <div class="row g-4">
+                <!-- Paper 1 -->
+                <div class="col-md-6">
+                    <div class="paper-tile p-3 border rounded shadow-sm">
+                        <strong>
+                            <a href="link-to-paper1.pdf" target="_blank" class="text-dark text-decoration-none">
+                                Migration Industries and the Making of an International Labor Market
+                            </a>
+                        </strong>
+                        <br>
+                        <small>Please email me for a draft-in-progress.</small>
+                        <br>
+                        <button class="btn btn-sm btn-outline-secondary mt-2" onclick="showAbstract('abstract1')">View Abstract</button>
                     </div>
                 </div>
         
-                <div class="paper card p-3" style="width: 45%;">
-                    <strong>
-                        <a href="link-to-paper2.pdf" target="_blank">
-                            Fringes of the Migration Industry
-                        </a>
-                    </strong><br>
-                    <small>Originally my undergraduate thesis. 
-                        <a href="https://www.amherst.edu/system/files/2024-07/6%20Nakazawa%20Thesis%20May%202024.pdf">Thesis Version</a>; 
-                        slides from <a href="link-to-paper2.pdf">PIER Conference (2024)</a>
-                    </small>
-                    <button class="toggle-abstract btn btn-link p-0">Show Abstract</button>
-                    <div class="abstract mt-2" style="display: none;">
-                        <strong>Abstract:</strong> Fraud and labor abuse among recruiters of international migrant workers have 
-                        persisted despite improvements in information provision and enforcement. I offer a more structural 
-                        explanation: intermediaries set higher prices on the inelastic side of the market, and competition for 
-                        employer demand in the downstream market drives recruiters to raise the migrant-side "price" above legal 
-                        limits (fraud). Using administrative data from the Philippines, I first document that fraud is indeed 
-                        concentrated among fringe recruiters, those with small market share, and that fraudsters tend to be 
-                        newer entrants and accept lower wages for their workers from employers. I then show that more competition 
-                        due to negative employer demand shocks increases the likelihood of recruiters i) exiting the market or 
-                        ii) becoming fraudulent, both of which are more pronounced for fringe recruiters. The total prevalence 
-                        of fraud, therefore, is determined by the net of the two effects, suggesting roles for entry and exit 
-                        regulation in the industry.
+                <!-- Paper 2 -->
+                <div class="col-md-6">
+                    <div class="paper-tile p-3 border rounded shadow-sm">
+                        <strong>
+                            <a href="link-to-paper2.pdf" target="_blank" class="text-dark text-decoration-none">
+                                Fringes of the Migration Industry
+                            </a>
+                        </strong>
+                        <br>
+                        <small>Originally my undergraduate thesis. 
+                            <a href="https://www.amherst.edu/system/files/2024-07/6%20Nakazawa%20Thesis%20May%202024.pdf">Thesis Version</a>; 
+                            slides from <a href="link-to-paper2.pdf">PIER Conference (2024)</a>
+                        </small>
+                        <br>
+                        <button class="btn btn-sm btn-outline-secondary mt-2" onclick="showAbstract('abstract2')">View Abstract</button>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- JavaScript to Toggle Abstracts -->
-        <script>
-            document.querySelectorAll(".toggle-abstract").forEach(button => {
-                button.addEventListener("click", function() {
-                    const abstract = this.nextElementSibling;
-                    if (abstract.style.display === "none") {
-                        abstract.style.display = "block";
-                        this.textContent = "Hide Abstract";
-                    } else {
-                        abstract.style.display = "none";
-                        this.textContent = "View Abstract";
-                    }
-                });
-            });
-        </script>
+        <!-- Modals for Abstracts -->
+        <!-- <div id="abstract1" class="abstract-modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeAbstract('abstract1')">&times;</span>
+                <h5>Migration Industries and the Making of an International Labor Market</h5>
+                <p>As international labor migration increased in greater Asia from 1992 to 2009, migrant supply chains characterized by smaller, more direct hiring were increasingly replaced by ones that involve large employers and intermediaries. A simple model shows that such <i>industrialization</i> of migration can increase both its scale and volatility...</p>
+            </div>
+        </div>
         
+        <div id="abstract2" class="abstract-modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeAbstract('abstract2')">&times;</span>
+                <h5>Fringes of the Migration Industry</h5>
+                <p>Fraud and labor abuse among recruiters of international migrant workers have persisted despite improvements in information provision and enforcement. I offer a more structural explanation: intermediaries set higher prices on the inelastic side of the market...</p>
+            </div>
+        </div> -->
         
-        
-        <!-- Styles
+        <!-- Styles -->
         <style>
             .paper-tile {
                 background: #f8f9fa;
@@ -149,7 +135,17 @@
                 cursor: pointer;
             }
         </style>
-        -->
+        
+        <!-- JavaScript -->
+        <script>
+            function showAbstract(id) {
+                document.getElementById(id).style.display = "flex";
+            }
+        
+            function closeAbstract(id) {
+                document.getElementById(id).style.display = "none";
+            }
+        </script>
 
         <!-- Ongoing Projects Section -->
         <section class="mt-4">
