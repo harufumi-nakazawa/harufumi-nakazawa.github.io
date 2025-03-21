@@ -52,7 +52,14 @@
                         <br>
                         <small>Please email me for a draft-in-progress.</small>
                         <br>
-                        <button class="btn btn-sm btn-outline-secondary mt-2" onclick="showAbstract('abstract1')">View Abstract</button>
+                        <button class="btn btn-sm btn-outline-secondary mt-2" data-bs-toggle="collapse" data-bs-target="#abstract1" aria-expanded="false" aria-controls="abstract1">
+                            View Abstract
+                        </button>
+                        <div class="collapse mt-3" id="abstract1">
+                            <p>
+                                As international labor migration increased in greater Asia from 1992 to 2009, migrant supply chains characterized by smaller, more direct hiring were increasingly replaced by ones that involve large employers and intermediaries. A simple model shows that such <i>industrialization</i> of migration can increase both its scale and volatility. This is because intermediaries that match origin-country workers to destination-country employers exploit economies of scale by aggregating demand for marginal units with lower willingness to pay. Consistent with this model, I provide evidence for i) large increases in both workers and employers from the first entry of intermediaries into the labor market and ii) higher wage elasticities of demand for intermediaries and large firms compared to smaller employers who hire directly. More opportunities abroad, therefore, came with increased uncertainty, which has policy implications for migrant protection, brain gain, and risk-sharing.
+                            </p>
+                        </div>
                     </div>
                 </div>
         
@@ -70,28 +77,18 @@
                             slides from <a href="link-to-paper2.pdf">PIER Conference (2024)</a>
                         </small>
                         <br>
-                        <button class="btn btn-sm btn-outline-secondary mt-2" onclick="showAbstract('abstract2')">View Abstract</button>
+                        <button class="btn btn-sm btn-outline-secondary mt-2" data-bs-toggle="collapse" data-bs-target="#abstract2" aria-expanded="false" aria-controls="abstract2">
+                            View Abstract
+                        </button>
+                        <div class="collapse mt-3" id="abstract2">
+                            <p>
+                                Fraud and labor abuse among recruiters of international migrant workers have persisted despite improvements in information provision and enforcement. I offer a more structural explanation: intermediaries set higher prices on the inelastic side of the market, and competition for employer demand in the downstream market drives recruiters to raise the migrant-side "price" above legal limits (fraud). Using administrative data from the Philippines, I first document that fraud is indeed concentrated among fringe recruiters, those with small market share, and that fraudsters tend to be newer entrants and accept lower wages for their workers from employers. I then show that more competition due to negative employer demand shocks increases the likelihood of recruiters i) exiting the market or ii) becoming fraudulent, both of which are more pronounced for fringe recruiters. The total prevalence of fraud, therefore, is determined by the net of the two effects, suggesting roles for entry and exit regulation in the industry.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- Modals for Abstracts -->
-        <!-- <div id="abstract1" class="abstract-modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeAbstract('abstract1')">&times;</span>
-                <h5>Migration Industries and the Making of an International Labor Market</h5>
-                <p>As international labor migration increased in greater Asia from 1992 to 2009, migrant supply chains characterized by smaller, more direct hiring were increasingly replaced by ones that involve large employers and intermediaries. A simple model shows that such <i>industrialization</i> of migration can increase both its scale and volatility...</p>
-            </div>
-        </div>
-        
-        <div id="abstract2" class="abstract-modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeAbstract('abstract2')">&times;</span>
-                <h5>Fringes of the Migration Industry</h5>
-                <p>Fraud and labor abuse among recruiters of international migrant workers have persisted despite improvements in information provision and enforcement. I offer a more structural explanation: intermediaries set higher prices on the inelastic side of the market...</p>
-            </div>
-        </div> -->
         
         <!-- Styles -->
         <style>
@@ -150,13 +147,23 @@
         <!-- Ongoing Projects Section -->
         <section class="mt-4">
             <h3>Work in Progress</h3>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <strong>Migrants' Jobs</strong>
-                    <p><strong>Abstract:</strong> I collect daily observations from centralized postings of overseas jobs in six of the largest migrant-sending countries across greater Asia (India, Indonesia, Nepal, Pakistan, Philippines, Sri Lanka). The harmonized job-level dataset includes, at minimum, the name of the destination-country employer, origin-country intermediary, occupation, and number of vacancies; and often, their wages, specific qualifications, and non-pecuniary amenities. The high-frequency data collection allows observation of both demand (job orders from the same set of destination countries to many origin countries) and equilibrium supply (sorting of similar workers to different destinations based on job characteristics), which I validate using aggregate-level administrative statistics. This allows me to answer several pressing policy questions. i) Migrant protection policies often result in trading off quality of migration with quantity, since employers can substitute across origin countries. How much is and what are the determinants of this elasticity of substitution? ii) Anecdotally, East Asian countries with severe labor shortages are increasingly struggling to recruit migrant workers despite the (diminishing but still high) wage premium. Is this empirically founded, and if so why? iii) Migrants faced with supporting family often get trapped in circular migration to more repressive, lower benefit destinations (e.g., GCC). Are migrants making optimal destination choices, and if not, how can policy shift their choices?</p>
-                </li>
-            </ul>
+            <div class="row g-4">
+                <!-- Migrants' Jobs -->
+                <div class="col-md-6">
+                    <div class="paper-tile p-3 border rounded shadow-sm">
+                        <strong>Migrants' Jobs</strong>
+                        <br>
+                        <button class="btn btn-sm btn-outline-secondary mt-2" data-bs-toggle="collapse" data-bs-target="#abstract3" aria-expanded="false" aria-controls="abstract3">
+                            View Abstract
+                        </button>
+                        <div class="collapse mt-3" id="abstract3">
+                            <p><strong>Abstract:</strong> I collect daily observations from centralized postings of overseas jobs in six of the largest migrant-sending countries across greater Asia (India, Indonesia, Nepal, Pakistan, Philippines, Sri Lanka). The harmonized job-level dataset includes, at minimum, the name of the destination-country employer, origin-country intermediary, occupation, and number of vacancies; and often, their wages, specific qualifications, and non-pecuniary amenities. The high-frequency data collection allows observation of both demand (job orders from the same set of destination countries to many origin countries) and equilibrium supply (sorting of similar workers to different destinations based on job characteristics), which I validate using aggregate-level administrative statistics. This allows me to answer several pressing policy questions. i) Migrant protection policies often result in trading off quality of migration with quantity, since employers can substitute across origin countries. How much is and what are the determinants of this elasticity of substitution? ii) Anecdotally, East Asian countries with severe labor shortages are increasingly struggling to recruit migrant workers despite the (diminishing but still high) wage premium. Is this empirically founded, and if so why? iii) Migrants faced with supporting family often get trapped in circular migration to more repressive, lower benefit destinations (e.g., GCC). Are migrants making optimal destination choices, and if not, how can policy shift their choices?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        
 
     </div>
 
