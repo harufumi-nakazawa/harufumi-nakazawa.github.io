@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Europe - Harufumi Nakazawa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white py-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="mb-0"><a href="../index.html" class="text-white text-decoration-none">Harufumi Nakazawa</a></h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a href="../index.html" class="nav-link text-white">Home</a></li>
+                    <li class="nav-item"><a href="../research.html" class="nav-link text-white">Research</a></li>
+                    <li class="nav-item"><a href="../photography.html" class="nav-link text-white active">Photography</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h2 class="text-center">Asia</h2>
+
+        <div class="photo-gallery">
+            <div class="photo">
+                <img src="../images/copenhagen.jpg" alt="Copenhagen, Denmark (2023)">
+                <p class="caption">Copenhagen, Denmark (2023)</p>
+            </div>
+            <div class="photo">
+                <img src="../images/stockholm.jpg" alt="Stockholm, Sweden (2023)">
+                <p class="caption">Stockholm, Sweden (2023)</p>
+            </div>
+            <div class="photo">
+                <img src="../images/tromso.jpg" alt="Tromsø, Norway (2023)">
+                <p class="caption">Tromsø, Norway (2023)</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .photo-gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .photo img {
+            width: 100%;
+            max-width: 900px;
+            display: block;
+            border-radius: 0; /* Removed rounded corners */
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .caption {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: #555;
+            text-align: center;
+            margin-top: 8px;
+        }
+    </style>
+</body>
+</html>
