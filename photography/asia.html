@@ -30,16 +30,16 @@
 
         <div class="photo-gallery">
             <div class="photo">
-                <img src="../images/tokyo.jpg" alt="Description 1">
-                <p class="caption">"Tokyo, Japan (2022)"</p>
+                <img src="../images/tokyo.jpg" alt="Tokyo, Japan (2022)">
+                <p class="caption">Tokyo, Japan (2022)</p>
             </div>
             <div class="photo">
-                <img src="../images/yokohama.jpg" alt="Description 2">
-                <p class="caption">"Yokohama, Japan (2021)"</p>
+                <img src="../images/yokohama.jpg" alt="Yokohama, Japan (2021)">
+                <p class="caption">Yokohama, Japan (2021)</p>
             </div>
             <div class="photo">
-                <img src="../images/karuizawa.jpg" alt="Description 3">
-                <p class="caption">"Karuizawa, Japan (2023)"</p>
+                <img src="../images/karuizawa.jpg" alt="Karuizawa, Japan (2023)">
+                <p class="caption">Karuizawa, Japan (2023)</p>
             </div>
         </div>
     </div>
@@ -49,25 +49,25 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 25px;
         }
 
         .photo img {
-            width: 80%;
+            width: 100%;
             max-width: 900px;
-            border-radius: 10px;
+            display: block;
+            border-radius: 0; /* Removed rounded corners */
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .caption {
             font-family: 'Lora', serif;
             font-style: italic;
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #555;
             text-align: center;
-            margin-top: 5px;
+            margin-top: 8px;
         }
     </style>
-
 </body>
 </html>
