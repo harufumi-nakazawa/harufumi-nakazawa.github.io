@@ -3,55 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            padding: 20px;
-        }
-
-        .photo-panel {
-            position: relative;
-            width: 100%;
-            padding-top: 100%; /* Makes it square */
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .photo-panel:hover {
-            transform: scale(1.05);
-        }
-
-        .photo-panel a {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            text-decoration: none;
-            background: rgba(0, 0, 0, 0.5);
-            transition: background 0.3s ease-in-out;
-        }
-
-        .photo-panel a:hover {
-            background: rgba(0, 0, 0, 0.7);
-        }
-    </style>
+    <title>Photography - Harufumi Nakazawa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- Header -->
     <header class="bg-dark text-white py-4">
         <div class="container d-flex justify-content-between align-items-center">
@@ -59,29 +17,60 @@
             <nav>
                 <ul class="nav">
                     <li class="nav-item"><a href="index.html" class="nav-link text-white">Home</a></li>
-                    <li class="nav-item"><a href="research.html" class="nav-link text-white active">Research</a></li>
-                    <li class="nav-item"><a href="photography.html" class="nav-link text-white">Photography</a></li>
+                    <li class="nav-item"><a href="research.html" class="nav-link text-white">Research</a></li>
+                    <li class="nav-item"><a href="photography.html" class="nav-link text-white active">Photography</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <div class="photo-grid">
-            <div class="photo-panel" style="background-image: url('images/asia.jpg');">
-                <a href="asia.html">Asia</a>
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h2>Photography</h2>
+        <p>Explore different photography categories.</p>
+
+        <div class="row g-4">
+            <div class="col-md-3 col-sm-6">
+                <a href="asia.html" class="photo-panel d-block text-decoration-none">
+                    <div class="image-box" style="background-image: url('images/asia.jpg');"></div>
+                    <h4 class="text-center mt-2 text-dark">Asia</h4>
+                </a>
             </div>
-            <div class="photo-panel" style="background-image: url('images/americas.jpg');">
-                <a href="americas.html">Americas</a>
+            <div class="col-md-3 col-sm-6">
+                <a href="americas.html" class="photo-panel d-block text-decoration-none">
+                    <div class="image-box" style="background-image: url('images/americas.jpg');"></div>
+                    <h4 class="text-center mt-2 text-dark">Americas</h4>
+                </a>
             </div>
-            <div class="photo-panel" style="background-image: url('images/europe.jpg');">
-                <a href="europe.html">Europe</a>
+            <div class="col-md-3 col-sm-6">
+                <a href="europe.html" class="photo-panel d-block text-decoration-none">
+                    <div class="image-box" style="background-image: url('images/europe.jpg');"></div>
+                    <h4 class="text-center mt-2 text-dark">Europe</h4>
+                </a>
             </div>
-            <div class="photo-panel" style="background-image: url('images/amherst.jpg');">
-                <a href="amherst.html">Amherst College</a>
+            <div class="col-md-3 col-sm-6">
+                <a href="amherst.html" class="photo-panel d-block text-decoration-none">
+                    <div class="image-box" style="background-image: url('images/amherst.jpg');"></div>
+                    <h4 class="text-center mt-2 text-dark">Amherst College</h4>
+                </a>
             </div>
         </div>
-    </main>
+    </div>
+
+    <style>
+        .image-box {
+            width: 100%;
+            padding-top: 100%; /* Ensures square aspect ratio */
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo-panel:hover .image-box {
+            transform: scale(1.05);
+        }
+    </style>
 
 </body>
 </html>
