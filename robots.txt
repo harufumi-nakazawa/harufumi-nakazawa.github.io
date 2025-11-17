@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://harufumi-nakazawa.github.io/sitemap.xml
+
