@@ -6,6 +6,7 @@ body {
     font-family: 'Crimson Text', serif;
     /* font-family: 'Arial', sans-serif; */
     background-color: #f8f9fa;
+    color: #212529;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -52,12 +53,12 @@ p {
 }
 
 header {
-    background-color: #343a40;
+    background-color: #f8f9fa;
 }
 
 header h1 a {
     text-decoration: none;
-    color: white;
+    color: inherit;
 }
 
 .card img {
@@ -97,6 +98,6 @@ body > .container {
 }
 
 footer {
-    background-color: #343a40;
+    background-color: #f8f9fa;
     margin-top: auto;
 }
