@@ -18,6 +18,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav .nav-link {
     font-family: 'Crimson Text', serif;
+    color: #000000 !important;
+    text-decoration: underline !important;
+}
+
+.nav .nav-link:hover,
+.nav .nav-link:focus,
+.nav .nav-link.active {
+    color: #000000 !important;
+    text-decoration: underline !important;
 }
 
 .photo-gallery {
