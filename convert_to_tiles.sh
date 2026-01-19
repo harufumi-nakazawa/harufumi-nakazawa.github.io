@@ -41,9 +41,9 @@ echo "This may take a while as it processes all years' data..."
 # --no-tile-compression: disable gzip compression for easier local debugging
 tippecanoe \
     -z14 \
-    -Z4 \
-    --full-detail=11 \
-    --low-detail=11 \
+    -Z0 \
+    --full-detail=18 \
+    --low-detail=14 \
     --detect-shared-borders \
     --coalesce-densest-as-needed \
     --output-to-directory="$TILES_DIR" \
