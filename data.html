@@ -140,7 +140,7 @@
 
         <div class="time-slider-container">
             <div class="slider-header">
-                <div class="year-display" id="yearDisplay">2006</div>
+                <div class="year-display" id="yearDisplay">2012</div>
                 <div class="slider-controls">
                     <label for="countrySelect" class="country-label">Country:</label>
                     <select id="countrySelect" class="country-select">
@@ -159,7 +159,7 @@
                     <button class="btn btn-sm btn-outline-secondary" id="resetBtn">Reset</button>
                 </div>
             </div>
-            <input type="range" class="time-slider" id="timeSlider" min="0" value="0" step="1">
+            <input type="range" class="time-slider" id="timeSlider" min="0" value="6" step="1">
         </div>
 
         <div style="position: relative;">
@@ -275,7 +275,7 @@
             zoom: 4 // Zoomed out to show all of Japan
         });
 
-        let currentYearIndex = 0;
+        let currentYearIndex = 6; // Start at 2012 (index 6 in years array)
         let isPlaying = false;
         let playInterval = null;
         let currentYear = null;
@@ -514,13 +514,18 @@
         map.on('load', () => {
             console.log('Map loaded, loading initial tiles...');
             // Set initial slider position based on default country (total)
+            // For 'total', start at 2012; for others, use firstYearByCountry
+            const initialYear = selectedCountry === 'total' ? 2012 : (firstYearByCountry[selectedCountry] || 2006);
+            const initialYearIndex = years.indexOf(initialYear);
             const firstYear = firstYearByCountry[selectedCountry] || 2006;
             const firstYearIndex = years.indexOf(firstYear);
             if (firstYearIndex >= 0) {
                 document.getElementById('timeSlider').min = firstYearIndex;
-                document.getElementById('timeSlider').value = firstYearIndex;
-                currentYearIndex = firstYearIndex;
-                document.getElementById('yearDisplay').textContent = firstYear;
+            }
+            if (initialYearIndex >= 0) {
+                document.getElementById('timeSlider').value = initialYearIndex;
+                currentYearIndex = initialYearIndex;
+                document.getElementById('yearDisplay').textContent = initialYear;
             }
             // Small delay to ensure map is fully ready, then load first year's data
             setTimeout(() => {
