@@ -88,10 +88,10 @@
                             </a>
                         </strong>
                         <br> <small>
-                        <small>Previously titled <i>Fringes of the Migration Industry</i>. 
+                        <small>Previously titled <i>Fringes of the Migration Industry</i>.
                             <br>
                             To be presented at the 19th International Conference on Migration and Development (2026). <a href="https://www.amherst.edu/system/files/2024-07/6%20Nakazawa%20Thesis%20May%202024.pdf" target="_blank">Undergraduate Thesis Version</a> (2024); Presented at the 2024 PIER Conference (<a href="files/pier_slides_20240427.pdf" target="_blank">slides</a>) and 2024 Five College Anthropology Conference (qualitative portion)
-                        </small>
+                        </small></small>
                         <br>
                         <button class="btn btn-sm btn-outline-secondary mt-2" data-bs-toggle="collapse" data-bs-target="#abstract2" aria-expanded="false" aria-controls="abstract2">
                             View Abstract
@@ -143,7 +143,9 @@
                 background: #f8f9fa;
                 transition: transform 0.2s ease-in-out;
                 height: 100%;
-                min-width: 300px;
+                min-width: 0;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
             }
             
             /* Ensure buttons maintain their original appearance */
@@ -155,13 +157,15 @@
                 transform: scale(1.02);
             }
             
-            /* Make columns equal height */
+            /* Make columns equal height and allow them to shrink so they stay side by side */
             .row.g-4 > [class*="col-"] {
                 display: flex;
+                min-width: 0;
             }
             
             .row.g-4 > [class*="col-"] > .paper-tile {
                 flex: 1;
+                min-width: 0;
             }
             
             /* Justify abstract text */
