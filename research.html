@@ -25,7 +25,7 @@
 
 <body>
     <!-- Header -->
-    <header class="py-4">
+    <header class="py-4 sticky-top">
         <div class="container d-flex justify-content-between align-items-center">
             <h1 class="mb-0"><a href="index.html" class="text-decoration-none">Harufumi Nakazawa</a></h1>
             <nav>
@@ -40,7 +40,25 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container mt-5">
+    <div class="container mt-5 pt-3">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <div class="card mb-4 sidebar-sticky">
+                    <img src="images/lombok.jpg" class="card-img-top" alt="Your Photo">
+                    <div class="card-body">
+                        <h3>Harufumi Nakazawa</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="mailto:hnakazawa@povertyactionlab.org"><i class="fas fa-envelope"></i> Email</a></li>
+                            <li><a href="https://github.com/harufumi-nakazawa" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/harufumi-nakazawa" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="col-md-8">
         <h2>Research</h2>
         <p>My primary research agenda is migration policy and governance over borders. I have so far focused on various infrastructures related to international migration, from recruitment to detention.</p>
         <ul>
@@ -56,7 +74,7 @@
 
         <section class="mt-4">
             <h3>Working Papers</h3>
-            <div class="row g-4">
+            <div class="paper-list">
                 <!-- Paper 1 -->
                 <!-- <div class="col-md-6">
                     <div class="paper-tile p-3 border rounded shadow-sm">
@@ -80,8 +98,8 @@
                 </div> -->
         
                 <!-- Paper 2 -->
-                <div class="col-sm-6">
-                    <div class="paper-tile p-3 border rounded shadow-sm">
+                <div class="mb-4">
+                    <div>
                         <strong>
                             <a href="https://www.dropbox.com/scl/fi/ac5qn35c0b4nssu7pjkil/migrant_recruitment_writing_sample.pdf?rlkey=ekl5lt1248g45eaplpgrhs48y&dl=0" target="_blank" class="text-dark text-decoration-none">
                                 Competition, Intermediation, and the Supply Chain of Migrant Labor
@@ -89,14 +107,14 @@
                         </strong>
                         <br>
                         <small>Previously titled <i>Fringes of the Migration Industry</i>. <a href="https://www.amherst.edu/system/files/2024-07/6%20Nakazawa%20Thesis%20May%202024.pdf" target="_blank">Undergraduate Thesis Version</a> (2024)
-                            <br>
-                            <strong>Presentations</strong>
-                            <ul class="mb-0 ps-3">
-                                <li>2026: 19th International Conference on Migration and Development</li>
-                                <li>2024: PIER Conference (<a href="files/pier_slides_20240427.pdf" target="_blank">slides</a>), Five College Anthropology Conference (qualitative portion)</li>
-                            </ul>
                         </small>
                         <br>
+                        <strong>Presentations</strong>
+                        <ul class="mb-0 ps-3">
+                            <li>2026: 19th International Conference on Migration and Development</li>
+                            <li>2024: PIER Conference (<a href="files/pier_slides_20240427.pdf" target="_blank">slides</a>), Five College Anthropology Conference (qualitative portion)</li>
+                        </ul>
+
                         <button class="btn btn-sm btn-outline-secondary mt-2" data-bs-toggle="collapse" data-bs-target="#abstract2" aria-expanded="false" aria-controls="abstract2">
                             View Abstract
                         </button>
@@ -112,8 +130,8 @@
                 </div>
         
                 <!-- Paper 3 -->
-                <div class="col-sm-6">
-                    <div class="paper-tile p-3 border rounded shadow-sm">
+                <div class="mb-4">
+                    <div>
                         <strong>
                             <a href="https://www.dropbox.com/scl/fi/2rf3sjrk9kdcalps6a4ew/amherstcourse_econ_public.pdf?rlkey=imzerwvjaeakdpq9183epvsak&st=a0y0cnce&dl=0" target="_blank" class="text-dark text-decoration-none">
                                 Breadth vs. Depth: A Text-Based Approach to Curriculum Design
@@ -122,14 +140,14 @@
                         <br>
                         <small>
                             <i>with Sebastien Brown, Erxi Lu, Ariana Ravitch, Tina Zhang, and Phillip Zhou</i>
-                            <br>
-                            <ul class="mb-0 ps-3">
-                                <li><a href="https://visual-open-curriculum.vercel.app/" target="_blank">Interactive web app</a> (pilot implementation ongoing)</li>
-                                <li>2026: <a href="https://www.dropbox.com/scl/fi/692mdhd034exj76qny4uw/ISLS_submission_20260329.pdf?rlkey=x1mgrfctg6nlbexq9nb4glnxy&dl=0" target="_blank">Write-up</a> accepted at the <i>Proceedings of the 6th Annual Meeting of the International Society of the Learning Sciences.</i></li>
-                                <li>2025: Amherst College Data Science Initiative</li>
-                            </ul>
                         </small>
-                        <br>
+                            <br>
+                        <ul class="mb-0 ps-3">
+                            <li><a href="https://visual-open-curriculum.vercel.app/" target="_blank">Interactive web app</a> (pilot implementation ongoing)</li>
+                            <li>2026: <a href="https://www.dropbox.com/scl/fi/692mdhd034exj76qny4uw/ISLS_submission_20260329.pdf?rlkey=x1mgrfctg6nlbexq9nb4glnxy&dl=0" target="_blank">Write-up</a> accepted at the <i>Proceedings of the 6th Annual Meeting of the International Society of the Learning Sciences.</i></li>
+                            <li>2025: Amherst College Data Science Initiative</li>
+                        </ul>
+
                         <button class="btn btn-sm btn-outline-secondary mt-2 me-2" data-bs-toggle="collapse" data-bs-target="#abstract3-paper" aria-expanded="false" aria-controls="abstract3-paper">
                             View Abstract
                         </button>
@@ -148,33 +166,10 @@
         
         <!-- Styles -->
         <style>
-            .paper-tile {
-                background: #f8f9fa;
-                transition: transform 0.2s ease-in-out;
-                height: 100%;
-                min-width: 0;
+            /* Keep long text/links wrapping naturally in top-down layout */
+            .paper-list > div {
                 overflow-wrap: break-word;
                 word-wrap: break-word;
-            }
-            
-            /* Ensure buttons maintain their original appearance */
-            .paper-tile .btn {
-                width: auto;
-            }
-        
-            .paper-tile:hover {
-                transform: scale(1.02);
-            }
-            
-            /* Make columns equal height and allow them to shrink so they stay side by side */
-            .row.g-4 > [class*="col-"] {
-                display: flex;
-                min-width: 0;
-            }
-            
-            .row.g-4 > [class*="col-"] > .paper-tile {
-                flex: 1;
-                min-width: 0;
             }
             
             /* Justify abstract text */
@@ -252,13 +247,15 @@
         <!-- Ongoing Projects Section -->
         <section class="mt-4">
             <h3>Work in Progress</h3>
-            <div class="row g-4">
+            <div class="paper-list">
                 <!-- Migrants' Jobs -->
-                <div class="col-sm-6">
-                    <div class="paper-tile p-3 border rounded shadow-sm">
+                <div class="mb-4">
+                    <div>
                         <strong>Migrants' Jobs</strong>
                         <br>
-
+                        <small>
+                            Data collection ongoing.
+                        </small>
                         <br>
                         
                         <button class="btn btn-sm btn-outline-secondary mt-2" data-bs-toggle="collapse" data-bs-target="#abstract3" aria-expanded="false" aria-controls="abstract3">
@@ -271,8 +268,8 @@
                 </div>
         
                 <!-- Work in Progress Project 2 -->
-                <div class="col-sm-6">
-                    <div class="paper-tile p-3 border rounded shadow-sm">
+                <div class="mb-4">
+                    <div>
                         <strong>When ICE Comes to Town: Institutional Exposure and Political Attitudes Toward Immigration</strong>
                         <br>
                         <small>
@@ -291,6 +288,8 @@
         </section>
         
 
+            </div>
+        </div>
     </div>
 
     <!-- Footer -->
