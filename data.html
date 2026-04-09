@@ -118,23 +118,30 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="py-4">
-        <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="mb-0"><a href="index.html" class="text-decoration-none">Harufumi Nakazawa</a></h1>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="research.html" class="nav-link">Research</a></li>
-                    <li class="nav-item"><a href="data.html" class="nav-link active">Data</a></li>
-                    <li class="nav-item"><a href="photography.html" class="nav-link">Photography</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <!-- Main Content -->
     <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 sidebar-sticky">
+                    <img src="images/lombok.jpg" class="card-img-top" alt="Your Photo">
+                    <div class="card-body">
+                        <h3>Harufumi Nakazawa</h3>
+                        <div class="sidebar-contact-inline">
+                            <a href="mailto:hnakazawa@povertyactionlab.org"><i class="fas fa-envelope"></i> Email</a>
+                            <a href="https://github.com/harufumi-nakazawa" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://linkedin.com/in/harufumi-nakazawa" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        </div>
+                        <div class="sidebar-page-links">
+                            <a href="index.html">Home</a>
+                            <a href="research.html">Research</a>
+                            <a href="data.html" class="active">Data</a>
+                            <a href="photography.html">Photography</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
         <h2>Japan & Immigration</h2>
         <p>The Japanese government provides data on the number of foreign residents at the Japanese municipality - origin nationality level (and for some years, immigration status - origin nationality level) but file format differs across years. I harmonized this into a single muncipality panel. Raw data is available <a href="https://www.e-stat.go.jp/stat-search/files?page=1&toukei=00250012&tstat=000001018034" target="_blank">here</a> from 2006 for large municipalities (市/区) and from 2012 for all municipalities. Please feel free to contact me if you are interested in using this data.</p>
 
@@ -218,6 +225,8 @@
                     <span class="legend-color" style="background-color: #5a0a45;"></span>
                     <span class="legend-label">15,001+</span>
                 </div>
+            </div>
+        </div>
             </div>
         </div>
     </div>

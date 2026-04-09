@@ -24,23 +24,8 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="py-4 sticky-top">
-        <div class="container d-flex justify-content-between align-items-center">
-            <h1 class="mb-0"><a href="index.html" class="text-decoration-none">Harufumi Nakazawa</a></h1>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="research.html" class="nav-link active">Research</a></li>
-                    <li class="nav-item"><a href="data.html" class="nav-link">Data</a></li>
-                    <li class="nav-item"><a href="photography.html" class="nav-link">Photography</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
     <!-- Main Content -->
-    <div class="container mt-5 pt-3">
+    <div class="container mt-5">
         <div class="row">
             <!-- Sidebar -->
             <div class="col-md-4">
@@ -48,11 +33,17 @@
                     <img src="images/lombok.jpg" class="card-img-top" alt="Your Photo">
                     <div class="card-body">
                         <h3>Harufumi Nakazawa</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="mailto:hnakazawa@povertyactionlab.org"><i class="fas fa-envelope"></i> Email</a></li>
-                            <li><a href="https://github.com/harufumi-nakazawa" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-                            <li><a href="https://linkedin.com/in/harufumi-nakazawa" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                        </ul>
+                        <div class="sidebar-contact-inline">
+                            <a href="mailto:hnakazawa@povertyactionlab.org"><i class="fas fa-envelope"></i> Email</a>
+                            <a href="https://github.com/harufumi-nakazawa" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://linkedin.com/in/harufumi-nakazawa" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        </div>
+                        <div class="sidebar-page-links">
+                            <a href="index.html">Home</a>
+                            <a href="research.html" class="active">Research</a>
+                            <a href="data.html">Data</a>
+                            <a href="photography.html">Photography</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -100,7 +91,7 @@
                 <!-- Paper 2 -->
                 <div class="mb-4">
                     <div>
-                        <strong>
+                        <strong class="paper-title">
                             <a href="https://www.dropbox.com/scl/fi/ac5qn35c0b4nssu7pjkil/migrant_recruitment_writing_sample.pdf?rlkey=ekl5lt1248g45eaplpgrhs48y&dl=0" target="_blank" class="text-dark text-decoration-none">
                                 Competition, Intermediation, and the Supply Chain of Migrant Labor
                             </a>
@@ -132,7 +123,7 @@
                 <!-- Paper 3 -->
                 <div class="mb-4">
                     <div>
-                        <strong>
+                        <strong class="paper-title">
                             <a href="https://www.dropbox.com/scl/fi/2rf3sjrk9kdcalps6a4ew/amherstcourse_econ_public.pdf?rlkey=imzerwvjaeakdpq9183epvsak&st=a0y0cnce&dl=0" target="_blank" class="text-dark text-decoration-none">
                                 Breadth vs. Depth: A Text-Based Approach to Curriculum Design
                             </a>
@@ -170,6 +161,11 @@
             .paper-list > div {
                 overflow-wrap: break-word;
                 word-wrap: break-word;
+            }
+
+            .paper-title {
+                font-size: 1.12rem;
+                line-height: 1.3;
             }
             
             /* Justify abstract text */
@@ -251,7 +247,7 @@
                 <!-- Migrants' Jobs -->
                 <div class="mb-4">
                     <div>
-                        <strong>Migrants' Jobs</strong>
+                        <strong class="paper-title">Migrants' Jobs</strong>
                         <br>
                         <small>
                             Data collection ongoing.
@@ -270,7 +266,7 @@
                 <!-- Work in Progress Project 2 -->
                 <div class="mb-4">
                     <div>
-                        <strong>When ICE Comes to Town: Institutional Exposure and Political Attitudes Toward Immigration</strong>
+                        <strong class="paper-title">When ICE Comes to Town: Institutional Exposure and Political Attitudes Toward Immigration</strong>
                         <br>
                         <small>
                             <i>with Ariana Rodriguez Bruzon and Aryen Shrestha</i>
