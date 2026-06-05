@@ -144,6 +144,34 @@ section {
     margin-bottom: 40px;
 }
 
+/* Research page: paper metadata and abstracts */
+.paper-list > div {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.paper-title {
+    font-size: 1.12rem;
+    line-height: 1.3;
+}
+
+/* Size set on container so text is correct before expand animation finishes */
+.paper-list .collapse,
+.paper-list .collapsing {
+    font-size: 0.875rem;
+}
+
+.paper-list .collapse p,
+.paper-list .collapsing p {
+    font-size: inherit;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+.paper-list .collapsing {
+    transition: none !important;
+}
+
 /* Justify prose in the main content column (sidebar stays as-is) */
 .col-md-8 p,
 .col-md-8 li,
