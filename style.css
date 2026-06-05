@@ -144,6 +144,14 @@ section {
     margin-bottom: 40px;
 }
 
+/* Justify prose in the main content column (sidebar stays as-is) */
+.col-md-8 p,
+.col-md-8 li,
+.col-md-8 .list-group-item {
+    text-align: justify;
+    hyphens: auto;
+}
+
 /* Make main content area grow to push footer down */
 body > .container {
     flex: 1;
