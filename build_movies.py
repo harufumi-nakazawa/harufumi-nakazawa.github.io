@@ -134,13 +134,13 @@ def render_sections(groups: dict[str, list[str]]) -> str:
             continue
 
         items = "\n".join(
-            f'                <li class="list-group-item">{html.escape(movie)}</li>'
+            f"                <li>{html.escape(movie)}</li>"
             for movie in movies
         )
         sections.append(
             f"""        <section class="mb-5">
             <h3>{decade}</h3>
-            <ul class="list-group list-group-flush">
+            <ul>
 {items}
             </ul>
         </section>"""
@@ -200,7 +200,6 @@ def render_page(sections_html: str, total: int) -> str:
             </div>
             <div class="col-md-8">
         <h2>Movies</h2>
-        <p>{total} films watched, grouped by release decade.</p>
 
 {sections_html}
 
