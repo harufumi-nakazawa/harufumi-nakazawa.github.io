@@ -81,10 +81,27 @@ header h1 a {
     text-align: center;
 }
 
+/* Sidebar locks immediately: top matches .container.mt-5 (3rem) */
+@media (min-width: 768px) {
+    body > .container > .row {
+        align-items: flex-start;
+    }
+
+    body > .container > .row > .col-md-4:first-child {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 3rem;
+        align-self: flex-start;
+        z-index: 1020;
+    }
+
+    .sidebar-sticky {
+        position: static;
+        top: auto;
+    }
+}
+
 .sidebar-sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 24px;
     align-self: flex-start;
 }
 
@@ -191,6 +208,10 @@ footer {
 }
 
 @media (max-width: 767.98px) {
+    body > .container > .row > .col-md-4:first-child {
+        position: static;
+    }
+
     .sidebar-sticky {
         position: static;
         top: auto;
