@@ -1,3 +1,8 @@
+:root {
+    --font-body: 'Crimson Text', 'Noto Serif JP', serif;
+    --font-heading: 'Cormorant Garamond', 'Noto Serif JP', serif;
+}
+
 html {
     height: 100%;
     overscroll-behavior-y: none;
@@ -5,8 +10,7 @@ html {
 
 body {
     overscroll-behavior-y: none;
-    font-family: 'Crimson Text', serif;
-    /* font-family: 'Arial', sans-serif; */
+    font-family: var(--font-body);
     background-color: #f8f9fa;
     color: #212529;
     min-height: 100vh;
@@ -15,11 +19,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-heading);
 }
 
 .nav .nav-link {
-    font-family: 'Crimson Text', serif;
+    font-family: var(--font-body);
     color: #000000 !important;
     text-decoration: underline !important;
 }
@@ -47,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .caption {
-    font-family: 'Crimson Text', serif;
+    font-family: var(--font-body);
     font-style: italic;
     font-size: 1rem;
     color: #555;
