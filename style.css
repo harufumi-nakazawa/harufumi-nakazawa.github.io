@@ -2,8 +2,7 @@
     --font-body: 'Crimson Text', 'Noto Serif JP', serif;
     --font-heading: 'Cormorant Garamond', 'Noto Serif JP', serif;
     --sidebar-width: 20rem;
-    --content-max-width: 34rem;
-    --page-max-width: 56rem;
+    --content-max-width: 42rem;
 }
 
 html {
@@ -96,6 +95,10 @@ header h1 a {
         grid-template-columns: var(--sidebar-width) minmax(0, var(--content-max-width));
         column-gap: 1.5rem;
         align-items: flex-start;
+        width: fit-content;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     body > .container > .row > .col-md-4:first-child,
@@ -218,14 +221,10 @@ section {
     hyphens: auto;
 }
 
-/* Cap overall page width (sidebar + gap + content) */
-.container {
-    max-width: var(--page-max-width);
-}
-
 /* Make main content area grow to push footer down */
 body > .container {
     flex: 1;
+    width: 100%;
 }
 
 footer {
