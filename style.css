@@ -1,11 +1,13 @@
 :root {
     --font-body: 'Crimson Text', 'Noto Serif JP', serif;
     --font-heading: 'Cormorant Garamond', 'Noto Serif JP', serif;
+    --sidebar-width: 20rem;
 }
 
 html {
     height: 100%;
     overscroll-behavior-y: none;
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -88,7 +90,19 @@ header h1 a {
 /* Sidebar locks immediately: top matches .container.mt-5 (3rem) */
 @media (min-width: 768px) {
     body > .container > .row {
+        display: grid;
+        grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+        column-gap: 1.5rem;
         align-items: flex-start;
+    }
+
+    body > .container > .row > .col-md-4:first-child,
+    body > .container > .row > .col-md-8 {
+        flex: none;
+        width: auto;
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     body > .container > .row > .col-md-4:first-child {
@@ -102,6 +116,7 @@ header h1 a {
     .sidebar-sticky {
         position: static;
         top: auto;
+        width: 100%;
     }
 }
 
