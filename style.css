@@ -2,6 +2,7 @@
     --font-body: 'Crimson Text', 'Noto Serif JP', serif;
     --font-heading: 'Cormorant Garamond', 'Noto Serif JP', serif;
     --sidebar-width: 20rem;
+    --content-max-width: 38rem;
 }
 
 html {
@@ -91,7 +92,7 @@ header h1 a {
 @media (min-width: 768px) {
     body > .container > .row {
         display: grid;
-        grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+        grid-template-columns: var(--sidebar-width) minmax(0, var(--content-max-width));
         column-gap: 1.5rem;
         align-items: flex-start;
     }
